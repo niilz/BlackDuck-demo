@@ -2,7 +2,7 @@ name: Black-Duck Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀 for Black-Duck 🦆
 on: [push]
 jobs:
-  Try out Black-Duck:
+  Try-out-Black-Duck:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
