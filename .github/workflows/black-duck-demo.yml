@@ -17,7 +17,7 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
-  docker-and-black-duck:
+  docker-build:
     runs-on: ubuntu-latest
     steps:
       - name: Set up QEMU
@@ -29,6 +29,11 @@ jobs:
         with:
           tags: ${{ github.actor }}/black-duck-example:latest
 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Again
+        uses: actions/checkout@v3
       - name: Polaris Scan
         uses: synopsys-sig/synopsys-action@v1.13.0
         with:
